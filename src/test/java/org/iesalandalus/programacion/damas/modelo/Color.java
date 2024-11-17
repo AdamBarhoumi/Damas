@@ -7,4 +7,8 @@ public enum Color {
     private Color(String cadenaAmostrar){
         this.cadenaAmostrar=cadenaAmostrar;
     }
+
+    private toString(){
+        return cadenaAmostrar;
+    }
 }
