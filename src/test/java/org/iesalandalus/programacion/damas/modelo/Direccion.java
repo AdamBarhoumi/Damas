@@ -8,6 +8,9 @@ public enum Direccion {
         this.cadenaAmostrar=cadenaAmostrar;
 }
 
+     private   toString(){
+        return cadenaAmostrar;
+}
 
 
 
