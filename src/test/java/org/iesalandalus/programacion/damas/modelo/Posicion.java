@@ -28,4 +28,8 @@ public class Posicion {
             throw new IllegalArgumentException("Te has salido de las posiciones de la tanla");
         }
     }
+    public Posicion(int fila, char columna){
+     setFila(fila);
+     setColumna(columna);
+    }
 }
