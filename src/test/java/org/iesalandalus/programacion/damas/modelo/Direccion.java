@@ -5,7 +5,10 @@ public enum Direccion {
 
    String cadenaAmostrar;
     private  Direccion(String cadenaAmostrar){
-
-
+        this.cadenaAmostrar=cadenaAmostrar;
 }
+
+
+
+
 }
