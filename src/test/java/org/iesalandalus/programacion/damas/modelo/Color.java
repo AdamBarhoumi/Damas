@@ -8,7 +8,8 @@ public enum Color {
         this.cadenaAmostrar=cadenaAmostrar;
     }
 
-    private toString(){
-        return cadenaAmostrar;
+    @Override
+    public String toString() {
+        return cadenaAmostrar ;
     }
 }
