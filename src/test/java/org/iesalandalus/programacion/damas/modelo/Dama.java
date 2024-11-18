@@ -41,4 +41,15 @@ public class Dama {
         this.color=Color.BLANCO;
         this.posicion= new Posicion(2,'a');
     }
+    public Dama(Color color){
+        if(color==Color.BLANCO){
+            this.posicion=new Posicion(1,'b');
+        }else {
+            if (color==Color.NEGRO){
+                this.posicion=new Posicion(6,'a');
+            }
+        }
+
+    }
+
 }
