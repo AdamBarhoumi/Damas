@@ -52,9 +52,12 @@ public class Posicion {
      if (siguientePosicion==null){
          throw new IllegalArgumentException(", te has salido de la tabla");
      }else {
-         this.fila=siguientePosicion.getFila();
-         this.columna=siguientePosicion.getColumna();
+         this.fila = siguientePosicion.getFila();
+         this.columna = siguientePosicion.getColumna();
      }
+     }
+     public String toString(){
+         return "fila= "+fila+ " columna= "+columna;
 
     }
 
