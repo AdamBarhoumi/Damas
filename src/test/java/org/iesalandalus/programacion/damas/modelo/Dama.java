@@ -36,4 +36,9 @@ public class Dama {
     public void setEsDamaEspecial(boolean esDamaEspecial) {
         this.esDamaEspecial = esDamaEspecial;
     }
+
+    public Dama(){
+        this.color=Color.BLANCO;
+        this.posicion= new Posicion(2,'a');
+    }
 }
