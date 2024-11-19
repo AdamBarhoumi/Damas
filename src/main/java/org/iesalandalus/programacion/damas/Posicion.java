@@ -1,11 +1,17 @@
-package org.iesalandalus.programacion.damas.modelo;
+package org.iesalandalus.programacion.damas;
 
 import java.util.Objects;
+
+
 
 public class Posicion {
     private int fila;
     private char columna;
 
+    public Posicion(int fila, char columna){
+        setFila(fila);
+        setColumna(columna);
+    }
     public int getFila() {
         return fila;
     }
@@ -30,10 +36,7 @@ public class Posicion {
             throw new IllegalArgumentException("La posición es invalida, te has salido de las posiciones de la tabla");
         }
     }
-    public Posicion(int fila, char columna){
-     setFila(fila);
-     setColumna(columna);
-    }
+
 
     @Override
     public boolean equals(Object o) {

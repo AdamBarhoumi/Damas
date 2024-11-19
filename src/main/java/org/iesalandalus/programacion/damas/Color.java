@@ -1,10 +1,10 @@
-package org.iesalandalus.programacion.damas.modelo;
+package org.iesalandalus.programacion.damas;
 
 public enum Color {
     BLANCO("Blanco"), NEGRO("Negro");
 
     String cadenaAmostrar;
-    private Color(String cadenaAmostrar){
+    Color(String cadenaAmostrar){
         this.cadenaAmostrar=cadenaAmostrar;
     }
 
