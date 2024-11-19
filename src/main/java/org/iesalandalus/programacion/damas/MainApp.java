@@ -9,7 +9,7 @@ public class MainApp {
         Dama dama1 =new Dama();
 
 
-        dama1.getPosicion();
+        System.out.println(dama1.getPosicion());
     }
 }
 
