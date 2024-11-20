@@ -235,7 +235,7 @@ public class Dama {
     }
 
     public void mover(Direccion direccion, int pasos)  throws OperationNotSupportedException {
-        {
+
             if (direccion == null) {
                 throw new IllegalArgumentException("No puedes mover la dama a esa posición");
 
@@ -278,8 +278,12 @@ public class Dama {
 
         }
 
+    @Override
+    public String toString() {
+        return "Dama color "+color+" con posicion"+posicion ;
     }
 }
+
 
 
 
