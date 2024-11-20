@@ -3,7 +3,7 @@ package org.iesalandalus.programacion.damas.modelo;
 public enum Color {
     BLANCO("Blanco"), NEGRO("Negro");
 
-    final String cadenaAmostrar;
+     private final String cadenaAmostrar;
     Color(String cadenaAmostrar){
         this.cadenaAmostrar=cadenaAmostrar;
     }

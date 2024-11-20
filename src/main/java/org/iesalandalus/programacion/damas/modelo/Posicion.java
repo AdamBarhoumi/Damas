@@ -17,7 +17,7 @@ public class Posicion {
     }
 
     public void setFila(int fila) {
-        if (fila>1&&fila<8) {
+        if (fila>=1&&fila<=8) {
             this.fila = fila;
         }else{
             throw new  IllegalArgumentException("La posición es invalida, te has salido de las posiciones de la tabla");
