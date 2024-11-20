@@ -36,39 +36,70 @@ public class Consola {
     }
 
     public static Color elegiropcion() {
-        Color color = null;
-        boolean ColorValido = false;
-        System.out.println("Elige un color");
+        Color color = null; //aqui lo que hago es que almaceno color que ha introducido el usuario
+        boolean colorValido = false;
+
+        System.out.println("Elige un color:");
+        System.out.println("===============");
         System.out.println("1. Color blanco");
         System.out.println("2. Color negro");
 
-        do {
-            System.out.println("Introduce tu opción");
-            int opcion = Entrada.entero();
 
-            if (opcion == 1) {
-                color = Color.BLANCO;
-                ColorValido = true;
-            } else if (opcion == 2) {
-                color = Color.NEGRO;
-                ColorValido = true;
-            } else {
-                System.out.println("Opción no válida. Por favor, elige 1 para Blanco o 2 para Negro.");
+        do {
+            System.out.print("Introduce tu opción: ");
+            int opcion = Entrada.entero();
+            switch (opcion) {
+                case 1:
+                    color = Color.BLANCO;
+                    colorValido = true;
+                    break;
+                case 2:
+                    color = Color.NEGRO;
+                    colorValido = true;
+                    break;
             }
-            System.out.println("color es " + opcion);
-        } while (ColorValido != true);
+        } while (colorValido==false);
 
         return color;
     }
 
-    public static void mostrarMenudirecciones() {
+    public static void mostrarMenuDirecciones() {
         System.out.println("Menú de direcciones");
         System.out.println("=====================");
         System.out.println("1. Noreste");
         System.out.println("2. Noroeste ");
         System.out.println("3. Sureste");
         System.out.println("4. Suroeste");
-        System.out.println("5. Salir");
+    }
+    public static Direccion elegirDireccion() {
+        int opcion;
+        Direccion direccion = null;//alamaceno la dirección;
+
+        boolean direccionValida=false;
+        do {
+            System.out.print("Introduce tu opoción: ");
+            opcion = Entrada.entero();
+            switch (opcion) {
+                case 1:
+                    direccion = Direccion.NORESTE;
+                    direccionValida = true;
+                    break;
+                case 2:
+                    direccion=Direccion.NORESTE;
+                    direccionValida=true;
+                    break;
+                case 3:
+                    direccion=Direccion.SURESTE;
+                    direccionValida=true;
+                    break;
+                case 4:
+                    direccion=Direccion.SUROESTE;
+                    direccionValida=true;
+                    break;
+            }
+        }while (direccionValida==false);
+
+        return direccion;
     }
 
 }
