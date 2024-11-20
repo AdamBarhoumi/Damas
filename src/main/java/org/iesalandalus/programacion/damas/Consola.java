@@ -1,6 +1,7 @@
 package org.iesalandalus.programacion.damas;
 
 import org.iesalandalus.programacion.damas.modelo.Color;
+import org.iesalandalus.programacion.damas.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -35,8 +36,8 @@ public class Consola {
     }
 
     public static Color elegiropcion() {
-        Color color= null;
-        boolean ColorValido=false;
+        Color color = null;
+        boolean ColorValido = false;
         System.out.println("Elige un color");
         System.out.println("1. Color blanco");
         System.out.println("2. Color negro");
@@ -49,17 +50,28 @@ public class Consola {
                 color = Color.BLANCO;
                 ColorValido = true;
             } else if (opcion == 2) {
-               color = Color.NEGRO;
+                color = Color.NEGRO;
                 ColorValido = true;
             } else {
                 System.out.println("Opción no válida. Por favor, elige 1 para Blanco o 2 para Negro.");
             }
-            System.out.println("color es "+opcion);
-        } while (ColorValido!=true);
+            System.out.println("color es " + opcion);
+        } while (ColorValido != true);
 
         return color;
     }
-        }
+
+    public static void mostrarMenudirecciones() {
+        System.out.println("Menú de direcciones");
+        System.out.println("=====================");
+        System.out.println("1. Noreste");
+        System.out.println("2. Noroeste ");
+        System.out.println("3. Sureste");
+        System.out.println("4. Suroeste");
+        System.out.println("5. Salir");
+    }
+
+}
 
 
 
