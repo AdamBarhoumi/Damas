@@ -1,5 +1,6 @@
-package org.iesalandalus.programacion.damas.modelo;
+package org.iesalandalus.programacion.damas;
 
+import org.iesalandalus.programacion.damas.modelo.Color;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -54,7 +55,7 @@ public class Consola {
                 System.out.println("Opción no válida. Por favor, elige 1 para Blanco o 2 para Negro.");
             }
             System.out.println("color es "+opcion);
-        } while (ColorValido!=true); 
+        } while (ColorValido!=true);
 
         return color;
     }

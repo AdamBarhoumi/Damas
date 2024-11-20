@@ -1,9 +1,11 @@
 package org.iesalandalus.programacion.damas.modelo;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Dama {
     Color color;
     Posicion posicion;
-    boolean esDamaEspecial;
+    boolean esDamaEspecial=false;
 
 
     public Color getColor() {
@@ -110,10 +112,10 @@ public class Dama {
         char columna = 'a';  // Inicializa la columna
 
         if (color == Color.BLANCO) {
-            // Las damas blancas se ubican en las filas 1, 2 y 3
+
             fila = (int) (Math.random() * 3) + 1;
 
-            // Selección de columna para las damas blancas (solo casillas negras)
+
             switch (fila) {
                 case 1:
                     int opcion1 = (int) (Math.random() * 4) + 1;
@@ -229,32 +231,66 @@ public class Dama {
 
 
         return new Posicion(fila, columna);
-    }
-
-    public void mover(Direccion direccion, int pasos) {
-        if (direccion == null) {
-            throw new IllegalArgumentException("No puedes mover la dama a esa posición");
-
-        }
-        if (this.color == Color.BLANCO){
-            mover(Direccion.NORESTE, 1);
-            mover(Direccion.NOROESTE, 1);
-        } else if (this.color==Color.NEGRO) {
-            mover(Direccion.SURESTE,1);
-            mover(Direccion.SUROESTE,1);
-
-        }
-        
-
 
     }
 
+    public void mover(Direccion direccion, int pasos)  throws OperationNotSupportedException {
+        {
+            if (direccion == null) {
+                throw new IllegalArgumentException("No puedes mover la dama a esa posición");
+
+            }
 
 
+            if (pasos < 1) { //Aqui dice qe si el numero es negativo que me lance un excepción
+                throw new IllegalArgumentException("solo puedes mover la dama uno o pasos hacia delante");
+            }
+            if (esDamaEspecial == false) {
+                pasos = 1;
+            }
+            if (this.color == Color.BLANCO) {
+                if (direccion == Direccion.NOROESTE || direccion == Direccion.NORESTE) {
+                    pasos++;
+                } else if (direccion == Direccion.SURESTE || direccion == Direccion.SUROESTE) {
+                    throw new IllegalArgumentException("Tienes una dama blanca, solo puedes moverte al noreste o noroeste");
+                }
+            }
+            if (this.color == Color.NEGRO) {
+                if (direccion == Direccion.SURESTE || direccion == Direccion.SUROESTE) {
+                    pasos++;
 
+                } else if (direccion == Direccion.NOROESTE || direccion == Direccion.NORESTE) {
+                    throw new IllegalArgumentException("Tienes una dama negra, solo puedes moverte al sureste o suroeste ");
+                }
 
+            }
+            int filaActual = posicion.getFila();
+            if ((filaActual < 1 || filaActual > 8) || (posicion.getColumna() < 'a' || posicion.getColumna() > 'h')) {
+                throw new OperationNotSupportedException("El movimiento sale de la tabla");
+            }
 
+            if (this.color == Color.BLANCO && filaActual == 8) {
+                esDamaEspecial = true;
+            } else if (this.color == Color.NEGRO && filaActual == 1) {
+                esDamaEspecial = true;
+
+            }
+
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
