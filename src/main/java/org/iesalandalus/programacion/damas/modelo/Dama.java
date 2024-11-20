@@ -38,6 +38,7 @@ public class Dama {
     public void setesDamaEspecial(boolean esDamaEspecial) {
         this.esDamaEspecial = esDamaEspecial;
     }
+
     public Dama() {
         this.color = Color.BLANCO; // Dama blanca
         int fila = (int) (Math.random() * 3) + 1; // Aleatorio entre 1, 2, 3
@@ -48,26 +49,49 @@ public class Dama {
         if (fila == 1) {
             int opcion = (int) (Math.random() * 4) + 1;
             switch (opcion) {
-                case 1: columna = 'b'; break;
-                case 2: columna = 'd'; break;
-                case 3: columna = 'f'; break;
-                case 4: columna = 'h'; break;
+                case 1:
+                    columna = 'b';
+                    break;
+                case 2:
+                    columna = 'd';
+                    break;
+                case 3:
+                    columna = 'f';
+                    break;
+                case 4:
+                    columna = 'h';
+                    break;
             }
         } else if (fila == 2) {
             int opcion = (int) (Math.random() * 4) + 1;
             switch (opcion) {
-                case 1: break;
-                case 2: columna = 'c'; break;
-                case 3: columna = 'e'; break;
-                case 4: columna = 'g'; break;
+                case 1:
+                    break;
+                case 2:
+                    columna = 'c';
+                    break;
+                case 3:
+                    columna = 'e';
+                    break;
+                case 4:
+                    columna = 'g';
+                    break;
             }
         } else if (fila == 3) {
             int opcion = (int) (Math.random() * 4) + 1;
             switch (opcion) {
-                case 1: columna = 'b'; break;
-                case 2: columna = 'd'; break;
-                case 3: columna = 'f'; break;
-                case 4: columna = 'h'; break;
+                case 1:
+                    columna = 'b';
+                    break;
+                case 2:
+                    columna = 'd';
+                    break;
+                case 3:
+                    columna = 'f';
+                    break;
+                case 4:
+                    columna = 'h';
+                    break;
             }
         }
 
@@ -94,27 +118,49 @@ public class Dama {
                 case 1:
                     int opcion1 = (int) (Math.random() * 4) + 1;
                     switch (opcion1) {
-                        case 1: columna = 'b'; break;
-                        case 2: columna = 'd'; break;
-                        case 3: columna = 'f'; break;
-                        case 4: columna = 'h'; break;
+                        case 1:
+                            columna = 'b';
+                            break;
+                        case 2:
+                            columna = 'd';
+                            break;
+                        case 3:
+                            columna = 'f';
+                            break;
+                        case 4:
+                            columna = 'h';
+                            break;
                     }
                     break;
                 case 2:
                     int opcion2 = (int) (Math.random() * 4) + 1;
                     switch (opcion2) {
-                        case 1: columna = 'c'; break;
-                        case 2: columna = 'e'; break;
-                        case 3: columna = 'g'; break;
+                        case 1:
+                            columna = 'c';
+                            break;
+                        case 2:
+                            columna = 'e';
+                            break;
+                        case 3:
+                            columna = 'g';
+                            break;
                     }
                     break;
                 case 3:
                     int opcion3 = (int) (Math.random() * 4) + 1;
                     switch (opcion3) {
-                        case 1: columna = 'b'; break;
-                        case 2: columna = 'd'; break;
-                        case 3: columna = 'f'; break;
-                        case 4: columna = 'h'; break;
+                        case 1:
+                            columna = 'b';
+                            break;
+                        case 2:
+                            columna = 'd';
+                            break;
+                        case 3:
+                            columna = 'f';
+                            break;
+                        case 4:
+                            columna = 'h';
+                            break;
                     }
                     break;
             }
@@ -128,28 +174,51 @@ public class Dama {
                 case 6:
                     int opcion6 = (int) (Math.random() * 4) + 1;
                     switch (opcion6) {
-                        case 1: break;
-                        case 2: columna = 'c'; break;
-                        case 3: columna = 'e'; break;
-                        case 4: columna = 'g'; break;
+                        case 1:
+                            break;
+                        case 2:
+                            columna = 'c';
+                            break;
+                        case 3:
+                            columna = 'e';
+                            break;
+                        case 4:
+                            columna = 'g';
+                            break;
                     }
                     break;
                 case 7:
                     int opcion7 = (int) (Math.random() * 4) + 1;
                     switch (opcion7) {
-                        case 1: columna = 'b'; break;
-                        case 2: columna = 'd'; break;
-                        case 3: columna = 'f'; break;
-                        case 4: columna = 'h'; break;
+                        case 1:
+                            columna = 'b';
+                            break;
+                        case 2:
+                            columna = 'd';
+                            break;
+                        case 3:
+                            columna = 'f';
+                            break;
+                        case 4:
+                            columna = 'h';
+                            break;
                     }
                     break;
                 case 8:
                     int opcion8 = (int) (Math.random() * 4) + 1;
                     switch (opcion8) {
-                        case 1: columna = 'a'; break;
-                        case 2: columna = 'c'; break;
-                        case 3: columna = 'e'; break;
-                        case 4: columna = 'g'; break;
+                        case 1:
+                            columna = 'a';
+                            break;
+                        case 2:
+                            columna = 'c';
+                            break;
+                        case 3:
+                            columna = 'e';
+                            break;
+                        case 4:
+                            columna = 'g';
+                            break;
                     }
                     break;
             }
@@ -162,7 +231,33 @@ public class Dama {
         return new Posicion(fila, columna);
     }
 
+    public void mover(Direccion direccion, int pasos) {
+        if (direccion == null) {
+            throw new IllegalArgumentException("No puedes mover la dama a esa posición");
+
+        }
+        if (this.color == Color.BLANCO){
+            mover(Direccion.NORESTE, 1);
+            mover(Direccion.NOROESTE, 1);
+        } else if (this.color==Color.NEGRO) {
+            mover(Direccion.SURESTE,1);
+            mover(Direccion.SUROESTE,1);
+
+        }
+        
+
+
+    }
+
+
+
+
+
+
 }
+
+
+
 
 
 
