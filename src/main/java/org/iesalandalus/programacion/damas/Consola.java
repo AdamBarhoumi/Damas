@@ -101,6 +101,20 @@ public class Consola {
 
         return direccion;
     }
+   public static int elegirPasos(){
+       int pasos;
+
+       do {
+           System.out.print("Introduce el numero de pasos que desea avanzar");
+           pasos = Entrada.entero();
+
+           if (pasos < 1) {
+               System.out.println("No puede introducir ese numero. El numero debe de ser igual o mayor a 1");
+           }
+       } while (pasos < 1);
+
+       return pasos;
+   }
 
 }
 
