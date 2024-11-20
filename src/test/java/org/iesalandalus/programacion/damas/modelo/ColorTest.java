@@ -2,7 +2,6 @@ package org.iesalandalus.programacion.damas.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.iesalandalus.programacion.damas.Color;
 import org.junit.jupiter.api.Test;
 
 

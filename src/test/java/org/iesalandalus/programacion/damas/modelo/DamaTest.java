@@ -2,10 +2,6 @@ package org.iesalandalus.programacion.damas.modelo;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.damas.Color;
-import org.iesalandalus.programacion.damas.Dama;
-import org.iesalandalus.programacion.damas.Direccion;
-import org.iesalandalus.programacion.damas.Posicion;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
