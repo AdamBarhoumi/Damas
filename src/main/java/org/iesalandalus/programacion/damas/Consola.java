@@ -115,7 +115,9 @@ public class Consola {
 
        return pasos;
    }
-
+    public static void despedirse(){
+        System.out.println("Gracias por usar nuestro servicio para jugar a las damas, esperemos que se lo haya pasado bien ¡Hasta pronto! ");
+    }
 }
 
 
