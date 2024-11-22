@@ -29,6 +29,19 @@ public class MainApp {
                 System.out.println("Opción no válida. Inténtelo de nuevo.");
                 break;
         }
+
+        public static void crearDamaDefecto() {
+            dama = new Dama();
+            System.out.println("Dama creada por defecto: " + dama);
+        }
+        public static void crearDamaColor() {
+            Color color = Consola.elegiropcion();
+            dama = new Dama(color);
+            System.out.println("Dama creada con color " + color + ": " + dama);
+        }
+
+
+
     }
 }
 
