@@ -62,6 +62,14 @@ public class MainApp {
         } catch (Exception excepcion) {
             System.out.println("No se pudo mover la dama por: " + excepcion.getMessage());
         }
+        public static void mostrarDama() {
+            if (dama != null) {
+                System.out.println("Dama actual: " + dama);
+            } else {
+                System.out.println("No se ha creado ninguna dama.");
+            }
+        }
+
     }
 
 
