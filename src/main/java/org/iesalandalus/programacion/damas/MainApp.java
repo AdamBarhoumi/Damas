@@ -30,20 +30,43 @@ public class MainApp {
                 break;
         }
 
-        public static void crearDamaDefecto() {
+        public static void crearDamaDefecto () {
             dama = new Dama();
             System.out.println("Dama creada por defecto: " + dama);
         }
-        public static void crearDamaColor() {
+        public static void crearDamaColor () {
             Color color = Consola.elegiropcion();
             dama = new Dama(color);
             System.out.println("Dama creada con color " + color + ": " + dama);
         }
 
+        public static void mover () {
+            if (dama == null) {
+                System.out.println("Primero debes crear una dama.");
+                return;
+            }
 
 
+        }
+        Consola.mostrarMenuDirecciones();
+        Direccion direccion = Consola.elegirDireccion();
+
+        int pasos = 1;
+        if (dama.esEsDamaEspecial()) {
+            pasos = Consola.elegirPasos();
+        }
+
+        try {
+            dama.mover(direccion, pasos);
+            System.out.println("Has movido la dama a: " + dama);
+        } catch (Exception excepcion) {
+            System.out.println("No se pudo mover la dama por: " + excepcion.getMessage());
+        }
     }
+
+
 }
+
 
 
 
