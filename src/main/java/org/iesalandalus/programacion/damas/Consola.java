@@ -9,7 +9,7 @@ public class Consola {
 
     }
 
-    public static void mostrarMenu() {
+    public static void mostrarMenu() {//Me mostrara las opciones que quiero elegir a la hora de iniciar el proyecto
 
         System.out.println("Menú de opciones, digite el numero de su opción");
         System.out.println("1. Crear dama por defecto");
@@ -19,12 +19,12 @@ public class Consola {
 
     }
 
-    public static int elegirOpcionMenu() {
+    public static int elegirOpcionMenu() {//Aqui me pedirá que introduzca por teclado el número de opción que desas
         int opcion = 0;
         do {
             System.out.print("Introduce una opción ");
             opcion = Entrada.entero();
-            if (opcion >= 1 && opcion <= 4) {
+            if (opcion >= 1 && opcion <= 4) {//Si la opcion es mas grande menos que uno y mas que 4 que me lo pida otra vez
                 break;
             } else {
                 System.out.println("Solo puedes elegir opciones del 1 al 4");
@@ -36,16 +36,16 @@ public class Consola {
     }
 
     public static Color elegiropcion() {
-        Color color = null; //aqui lo que hago es que almaceno color que ha introducido el usuario
-        boolean colorValido = false;
+        Color color = null; //inicializo el valor como nulo para que este no tenga ningun valor al iniciar el programa
+        boolean colorValido = false;//Inicializo el color valido como falso
 
-        System.out.println("Elige un color:");
+        System.out.println("Elige un color:");//Le muestro en pantalla los colores que puede elegir
         System.out.println("===============");
         System.out.println("1. Color blanco");
         System.out.println("2. Color negro");
 
 
-        do {
+        do {//Mientras no digite alguno de los colores volvera a preguntar  que opcion de color quieres
             System.out.print("Introduce tu opción: ");
             int opcion = Entrada.entero();
             switch (opcion) {
@@ -63,7 +63,7 @@ public class Consola {
         return color;
     }
 
-    public static void mostrarMenuDirecciones() {
+    public static void mostrarMenuDirecciones() {//Mostrará las direciones a elegir
         System.out.println("Menú de direcciones");
         System.out.println("=====================");
         System.out.println("1. Noreste");
@@ -73,11 +73,10 @@ public class Consola {
     }
     public static Direccion elegirDireccion() {
         int opcion;
-        Direccion direccion = null;//alamaceno la dirección;
-
+        Direccion direccion = null;//Alamaceno la dirección como nulo
         boolean direccionValida=false;
         do {
-            System.out.print("Introduce tu opoción: ");
+            System.out.print("Introduce tu opoción: ");//Pido que introduzca el  numero de direccion que desee
             opcion = Entrada.entero();
             switch (opcion) {
                 case 1:
@@ -101,7 +100,7 @@ public class Consola {
 
         return direccion;
     }
-   public static int elegirPasos(){
+   public static int elegirPasos(){//Pido que introduzca el numero de pasos que quiere avanzar
        int pasos;
 
        do {
@@ -111,7 +110,7 @@ public class Consola {
            if (pasos < 1) {
                System.out.println("No puede introducir ese numero. El numero debe de ser igual o mayor a 1");
            }
-       } while (pasos < 1);
+       } while (pasos < 1);//Y estos tienen que ser un numero entero mayor que 1
 
        return pasos;
    }

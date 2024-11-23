@@ -43,9 +43,9 @@ public class Dama {
 
     public Dama() {
         this.color = Color.BLANCO; // Dama blanca
-        int fila = (int) (Math.random() * 3) + 1;// Que me de un numeroi aleatorio de entre 1
+        int fila = (int) (Math.random() * 3) + 1;// Que me de un numero aleatorio de entre 1
 
-        char columna = 'a'; // Inicializamos la columna (se sobreescribirá más adelante)
+        char columna = 'a'; // Inicializamos la columna (se sobreescribirá más adelante)z
 
         // Determinamos la columna dependiendo de la fila seleccionada
         if (fila == 1) {
@@ -274,10 +274,10 @@ public class Dama {
 
             }
 
-            int nuevaFila = posicion.getFila();
+            int nuevaFila = posicion.getFila();//asgnamos cada parte de la posicion a nuevafila o nuevacolumna
             char nuevaColumna = posicion.getColumna();
 
-            switch (direccion) {
+            switch (direccion) {//para cada caso de direccción que elija el usuario aumentará o disminuirá  un paso la columna o la fila
                 case NORESTE:
                     if (color == Color.NEGRO ) {
                         throw new OperationNotSupportedException("La dama negra no puede moverse hacia el noreste.");

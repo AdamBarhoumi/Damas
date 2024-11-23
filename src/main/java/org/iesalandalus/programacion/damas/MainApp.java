@@ -7,8 +7,6 @@ import org.iesalandalus.programacion.damas.modelo.Posicion;
 
 
 public class MainApp {
-
-
     private static Dama dama;
 
     public static void ejecutarOpcion(int opcion) {//cremos un metodo para que llame a otros metodos con el switch
@@ -31,18 +29,18 @@ public class MainApp {
         }
     }
 
-    public static void crearDamaDefecto() {
+    public static void crearDamaDefecto() {//Llama al constructor dama para que cree una dama blnaca al azar
         dama = new Dama();
         System.out.println("Dama creada por defecto: " + dama);
     }
 
-    public static void crearDamaColor() {
-        Color color = Consola.elegiropcion();
+    public static void crearDamaColor() {//Llama al constructór para que le cree una dama negra o blanca
+        Color color = Consola.elegiropcion();//Llama al metodo elegir opcion de la clase consola
         dama = new Dama(color);
         System.out.println("Dama creada con color " + color + ": " + dama);
     }
 
-    public static void mover() {
+    public static void mover() {//Lama al metodo mover para que mueva la dama segun la direccion que introduzca el usuario
         if (dama == null) {
             System.out.println("Primero debes crear una dama.");
             return;
@@ -65,7 +63,7 @@ public class MainApp {
         }
     }
 
-    public static void mostrarDama() {
+    public static void mostrarDama() {//método que nos mostrara la posicion de la dama
         if (dama != null) {
             System.out.println("Dama actual: " + dama);
         } else {
@@ -73,7 +71,7 @@ public class MainApp {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//que nos muestre las opciones siempre hasta darle al numero 4 (salir)
         int opcion;
         do {
             Consola.mostrarMenu();
